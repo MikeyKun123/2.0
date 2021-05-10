@@ -74,24 +74,31 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello! I am *Senku*.
-I'm here to help you manage your groups! Hit *📚Commands* button below to find out more about how to use me to my full potential[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
+Dattebayo! It's Me your favorite Hokage *Uzumaki Naruto* OwO!
+
+I am a Powerful Anime themed group management bot.😁
+*I, Specialize in managing anime and similar themed groups*.
+
+You are Free to Use Me Just Don't Make me Admin As I'm Still under developement,To Know More Please Visit Our Bot developement Group.
+*IF you Make me Admin without asking our Support group,Owner will Not be Responsible If Something Happens To Your Groups*.
+
+Hit *🔥Jutsu🔥* button below to find out more about how to use me to my full Chakra Potential[.](https://telegra.ph/file/5ef826f7f8f0ff53ccea7.mp4)
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="➕️ Add Me 🔘", url="t.me/SenkuRoBot?startgroup=true"),
+            text="➕⚡Add ME⚡➕", url="t.me/Naruto_01Robot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="ℹ️ About", callback_data="masha_"),
-        InlineKeyboardButton(text="📚 Commands", callback_data="help_back"),
+        InlineKeyboardButton(text="About Me 😇", callback_data="masha_"),
+        InlineKeyboardButton(text="🔥Jutsu🔥", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="💾 Source", callback_data="source_"),
+            text="Source 💾", callback_data="source_"),
         InlineKeyboardButton(
-            text="🔔 News", url="https://t.me/SenkuNews"
+            text="BOT Developement 💯", url="https://t.me/NarutoRobot002_support"
         ),
     ],
 ]
@@ -99,8 +106,7 @@ buttons = [
 
 HELP_STRINGS = """
 *『HELP BUTTONS HERE』 *
-
-• `/help`*:* PM's you this message[.](https://telegra.ph/file/418fe04d27f1fb02788e3.png)
+• `/help`*:* PM's you this message[.](https://telegra.ph/file/7f002e185edd5e88cfc7d.jpg)
  • `/help` `<module name>`*:* PM's you info about that module.
  • `/settings`*:*
    • in PM: will send you your settings for all supported modules.
@@ -108,7 +114,7 @@ HELP_STRINGS = """
 """
 
 
-DONATE_STRING = """No need ! I'm rich OwO"""
+DONATE_STRING = """No need ! Just Share The Bot to Your Friends"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -218,7 +224,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "I'm awake already Just practicing the new jutsu I learnt!\n<b>Haven't rested since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -353,20 +359,16 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text="""⚡️ I'm *Senku*, a powerful group management bot built to help you manage your group easily.
-
+            text="""I'M *Uzumaki Naruto* 💯🤘, a powerful group management bot built to help you manage your group easily.
 • I can restrict users.
 • I can greet users with customizable welcome messages and even set a group's rules.
 • I have an advanced anti-flood system.
 • I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
 • I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
 • I check for admins' permissions before executing any command and more stuffs.
-
-_Senku's licensed under the GNU General Public License v3.0_
-
-Here is the [💾 Repository](https://github.com/FtSasaki/SenkuRobot).
-
-If you have any question about Senku, let us know at @SenkuSupport.""",
+_Naruto's licensed under the GNU General Public License v3.0_
+Here is the [💾 Repository](https://github.com/Vedant-vn/NarutoRobot001).
+If you have any question about our Bot Naruto, let us know at our Support Chat.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -392,8 +394,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hey there! I'm *SenkuRobot*
-                 \nHere is the 💾 [Source Code](https://github.com/FtSasaki/SenkuRobot) .""",
+            text=""" Hey there! I'm *NarutoRobot2.0* 
+                 \nYou want Codes Hmmm..You Can Have Them But Don't Come to Us asking Doubts, Here is the 💾 [Source Code](https://github.com/Vedant-vn/NarutoRobot001) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -688,7 +690,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Get Excited OwO!")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Uzumaki Naruto Reporting To Its Ninja base...")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
