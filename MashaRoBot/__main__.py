@@ -74,16 +74,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-(https://telegra.ph/file/5ef826f7f8f0ff53ccea7.mp4)
 Dattebayo! It's Me your favorite Hokage *Uzumaki Naruto* OwO!
 
-I am a Powerful Anime themed group management bot.😁
-*I, Specialize in managing anime and similar themed groups*.
+*I am a Powerful Anime themed group management bot.😁 I,Specialize in managing anime and similar themed groups*.
 
-You are Free to Use Me Just Don't Make me Admin As I'm Still under developement,To Know More Please Visit Our Bot developement Group.
-*IF you Make me Admin without asking our Support group,Owner will Not be Responsible If Something Happens To Your Groups*.
+(You are Free to Use Me Just Don't Make me Admin As I'm Still under developement,To Know More Please Visit Our Bot developement Group.
+*IF you Make me Admin without asking our Support group,Owner will Not be Responsible If Something Happens To Your Groups*.)
 
-Hit *🔥Jutsu🔥* button below to find out more about how to use me to my full Chakra Potential[.]
+Hit *🔥Jutsu🔥* button below to find out more about how to use me to my full Chakra Potential[.](https://telegra.ph/file/369a8bc44816a11af8865.mp4)
 """
 
 buttons = [
@@ -99,7 +97,11 @@ buttons = [
         InlineKeyboardButton(
             text="Source 💾", callback_data="source_"),
         InlineKeyboardButton(
-            text="BOT Developement 💯", url="https://t.me/NarutoRobot002_support"
+            text="BOT Developement 💯", url="https://t.me/NarutoRobot002_support"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="➕❤️Anime Chat❤️➕", url="https://t.me/Anime_Discussion_requests"
         ),
     ],
 ]
@@ -115,7 +117,7 @@ HELP_STRINGS = """
 """
 
 
-DONATE_STRING = """No need ! Just Share The Bot to Your Friends"""
+DONATE_STRING = """No need ! Just Share This Bot to Your Friends"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -396,7 +398,7 @@ def Source_about_callback(update: Update, context: CallbackContext):
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hey there! I'm *NarutoRobot2.0* 
-                 \nYou want Codes Hmmm..You Can Have Them But Don't Come to Us asking Doubts, Here is the 💾 [Source Code](https://github.com/Vedant-vn/NarutoRobot001) .""",
+                 \nYou want Codes Hmmm..You Can Have Them But Don't Come to Us asking Doubts, Here is the 💾 [Source Code](https://github.com/Rs-45/2.0) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
