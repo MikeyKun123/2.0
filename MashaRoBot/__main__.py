@@ -362,7 +362,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text="""I'M *Uzumaki Naruto* 💯🤘, a powerful group management bot built to help you manage your group easily.
+            text="""I'M *Uzumaki Naruto 2.0* 💯🤘, a powerful group management bot built to help you manage your group easily.
 • I can restrict users.
 • I can greet users with customizable welcome messages and even set a group's rules.
 • I have an advanced anti-flood system.
@@ -693,7 +693,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Uzumaki Naruto Reporting To Its Ninja base...")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Lord Hokage,I'M Back From My Mission...Now Give Me Some Ramen! :)")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
