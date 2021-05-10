@@ -238,7 +238,7 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>Looking For Info in Ninja Scrolls...</code>", parse_mode=ParseMode.HTML)
 
     text = (
         f"╒═══「<b> Appraisal results:</b> 」\n"
@@ -287,26 +287,26 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThe Disaster level of this person is 'God'."
+        text += "\n\nThis Ninja is our Protector The 'Lord Hokage'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of 'Hero Association'."
+        text += "\n\nThis Ninja is one of the'Legendary Sanins'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThe Disaster level of this person is 'Dragon'."
+        text += "\n\nThis Ninja is a threat afterall he's an 'Akatsuki'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThe Disaster level of this person is 'Demon'."
+        text += "\n\nThe Ninja level of this person is 'Anbu black op'."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nThe Disaster level of this person is 'Tiger'."
+        text += "\n\nThe Ninja level of this person is 'Jonin'."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nThe Disaster level of this person is 'Wolf'."
+        text += "\n\nThe Ninja level of this person is 'Chunin'."
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/OnePunchUpdates/155">?</a>]'.format(
+        text += ' [<a href="https://t.me/Naruto_Updates/5">?</a>]'.format(
             bot.username
         )
 
@@ -422,7 +422,7 @@ def set_about_me(update: Update, context: CallbackContext):
 @run_async
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>📊 Current stats:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>📊 Current Ninja stats:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_text(result, parse_mode=ParseMode.HTML)
 
@@ -479,7 +479,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust Heroes Association to set my bio."
+                "Erm... yeah, I only trust Lord Hokage to set my bio."
             )
             return
 
@@ -521,30 +521,26 @@ __help__ = """
 • `/afk` `<reason>`*:* mark yourself as AFK(away from keyboard).
 • `brb` `<reason>`*:* same as the afk command - but not a command.
 When marked as AFK, any mentions will be replied to with a message to say you're not available!
-
 *ID:*
 • `/id`*:* get the current group id. If used by replying to a message, gets that user's id.
 • `/gifid`*:* reply to a gif to me to tell you its file ID.
-
 *Self addded information:* 
 • `/setme` `<text>`*:* will set your info
 • `/me`*:* will get your or another user's info.
 *Examples:* 💡
 ❍ `/setme I am a wolf`
 ❍ `/me` `@username` (defaults to yours if no user specified)
-
 *Information others add on you:* 
 • `/bio`*:* will get your or another user's bio. This cannot be set by yourself.
 • `/setbio` `<text>`*:* while replying, will save another user's bio 
 *Examples:* 💡
 ❍ `/bio @username` (defaults to yours if not specified)
 ❍ `/setbio This user is a wolf` (reply to the user)
-
 *Overall Information about you:*
 • `/info`*:* get information about a user. 
  
 *What is that health thingy?*
-• [HP System explained](https://t.me/OnePunchUpdates/192)
+• [HP System explained](https://t.me/Naruto_Updates/7)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio)
