@@ -81,7 +81,7 @@ Dattebayo! It's Me your favorite Hokage *Uzumaki Naruto* OwO!
 (You are Free to Use Me Just Don't Make me Admin As I'm Still under developement,To Know More Please Visit Our Bot developement Group.
 *IF you Make me Admin without asking our Support group,Owner will Not be Responsible If Something Happens To Your Groups*.)
 
-Hit *🔥Jutsu🔥* button below to find out more about how to use me to my full Chakra Potential[.](https://telegra.ph/file/369a8bc44816a11af8865.mp4)
+Hit *🔥Jutsu🔥* button below to find out more about how to use me to my full Chakra Potential[.](https://telegra.ph/file/4b528e1b229e86efbe4e9.jpg)
 """
 
 buttons = [
