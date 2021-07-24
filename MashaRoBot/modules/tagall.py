@@ -8,14 +8,14 @@ from telegram.ext import (run_async,
                           Filters, CommandHandler,
                           CallbackQueryHandler)
 
-from AsunaRobot import dispatcher,mongodb
-from AsunaRobot.modules.disable import DisableAbleCommandHandler
-from AsunaRobot.modules.helper_funcs.chat_status import (
+from MashaRoBot import dispatcher,mongodb
+from MashaRoBot.modules.disable import DisableAbleCommandHandler
+from MashaRoBot.modules.helper_funcs.chat_status import (
     bot_admin,
     user_admin
 )
-from AsunaRobot.modules.helper_funcs.extraction import extract_user_and_text
-from AsunaRobot.modules.helper_funcs.alternate import typing_action
+from MashaRoBot.modules.helper_funcs.extraction import extract_user_and_text
+from MashaRoBot.modules.helper_funcs.alternate import typing_action
 
 
 @bot_admin
