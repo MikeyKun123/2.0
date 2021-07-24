@@ -1,7 +1,7 @@
 from pyrogram import filters
 
-from MashaRobot.modules.helper_funcs.pluginhelpers import admins_only, get_text
-from MashaRobot import pgram
+from GabiBraunRobot.modules.helper_funcs.pluginhelpers import admins_only, get_text
+from GabiBraunRobot import pgram
 
 
 @pgram.on_message(filters.command("tagall") & ~filters.edited & ~filters.bot)
